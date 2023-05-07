@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - pnpm install
+        - pnpm run postinstall
+    build:
+      commands:
+        - pnpm run build
+  artifacts:
+    baseDirectory: .output/public
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - .pnpm/**/*
