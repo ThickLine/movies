@@ -4,10 +4,10 @@ frontend:
     preBuild:
       commands:
         - yarn install
-        - yarn run postinstall
+        - yarn postinstall
     build:
       commands:
-        - yarn run build
+        - yarn build
   artifacts:
     baseDirectory: .output/public
     files:
