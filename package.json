@@ -3,7 +3,8 @@
   "packageManager": "pnpm@7.29.0",
   "scripts": {
     "build": "nuxi build",
-    "dev": "nuxi dev",
+    "dev": "concurrently \"pnpm dev:app\" \"pnpm dev:proxy\"",
+    "dev:app": "nuxi dev",
     "dev:proxy": "cd proxy && pnpm dev",
     "start": "node .output/server/index.mjs",
     "postinstall": "nuxi prepare",
