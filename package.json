@@ -6,7 +6,7 @@
     "dev": "concurrently \"pnpm dev:app\" \"pnpm dev:proxy\"",
     "dev:app": "nuxi dev",
     "dev:proxy": "cd proxy && pnpm dev",
-    "start": "node .output/server/index.mjs",
+    "start": ".output/server/index.mjs",
     "postinstall": "nuxi prepare",
     "lint": "eslint ."
   },
