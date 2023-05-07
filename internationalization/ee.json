@@ -1,0 +1,65 @@
+{
+  "Popular Movies": "Populaarsed filmid",
+  "Top Rated Movies": "Kõrgelt hinnatud filmid",
+  "Upcoming Movies": "Tulevased filmid",
+  "Now Playing Movies": "Praegu mängitavad filmid",
+  "Popular TV Shows": "Populaarsed telesaated",
+  "Top Rated TV Shows": "Kõrgelt hinnatud telesaated",
+  "TV Shows Airing Today": "Täna eetris olevad telesaated",
+  "On The Air TV Shows": "Praegused telesaated",
+
+  "Watch Trailer": "Vaata treilerit",
+  "Explore more": "Uuri lähemalt",
+
+  "Overview": "Ülevaade",
+  "Videos": "Videod",
+  "Media Photos": "Fotod",
+
+  "Cast": "Näitlejad",
+  "More like this": "Rohkem selliseid",
+
+  "Storyline": "Lugu",
+  "Release Date": "Ilmumiskuupäev",
+  "Runtime": "Kestus",
+  "Director": "Režissöör",
+  "Budget": "Eelarve",
+  "Revenue": "Tulu",
+  "Genre": "Žanr",
+  "Status": "Staatus",
+  "Language": "Keel",
+  "Production": "Tootmine",
+
+  "Backdrops": "Taustapildid",
+  "Posters": "Plakatid",
+
+  "Known For": "Tuntud",
+  "Credits": "Krediit",
+  "Person Photos": "Isiku fotod",
+  "(no biography)": "(puudub elulugu)",
+  "Known for": "Tuntud",
+  "Place of birth": "Sünnikoht",
+  "Birthday": "Sünnipäev",
+
+  "Acting Credits": "Näitlemise krediit",
+  "Production Credits": "Tootmise krediit",
+
+  "Type to search...": "Otsimiseks kirjuta...",
+  "Type something to search...": "Otsimiseks kirjuta midagi...",
+
+  "{numberOfReviews} Reviews": "{numberOfReviews} arvustust",
+
+  "{numberOfImages} Images": "{numberOfImages} pilti",
+  "{numberOfVideos} Videos": "{numberOfVideos} videot",
+
+  "as {character}": "{character} rollis",
+
+  "{count} items": "{count} kirjet",
+  "Search result for: {currentSearch}": "Otsingutulemused: {currentSearch}",
+
+  "Error occurred on fetching": "Andmete laadimisel ilmnes viga",
+  "Retry": "Proovi uuesti",
+  "Search": "Otsi",
+  "Home": "Avaleht",
+  "Movies": "Filmid",
+  "TV Shows": "Telesaated"
+}

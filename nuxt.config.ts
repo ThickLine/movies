@@ -1,7 +1,7 @@
 const isDev = process.env.NODE_ENV === 'development'
 
-// const apiBaseUrl = 'http://localhost:3001'
-const apiBaseUrl = 'https://movies-proxy.vercel.app'
+const apiBaseUrl = 'http://localhost:3001'
+// const apiBaseUrl = 'https://movies-proxy.vercel.app'
 
 export default defineNuxtConfig({
   modules: [
@@ -35,34 +35,24 @@ export default defineNuxtConfig({
   },
   i18n: {
     detectBrowserLanguage: {
-      useCookie: false,
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
       fallbackLocale: 'en',
     },
     strategy: 'no_prefix',
     locales: [
-      {
-        code: 'en',
-        file: 'en.json',
-      },
-      {
-        code: 'de-DE',
-        file: 'de-DE.json',
-      },
-      {
-        code: 'es-ES',
-        file: 'es-ES.json',
-      },
-      {
-        code: 'ja',
-        file: 'ja.json',
-      },
-      {
-        code: 'zh-CN',
-        file: 'zh-CN.json',
-      },
+      { code: 'en', file: 'en.json' },
+      { code: 'ee', file: 'ee.json' },
+      { code: 'lv', file: 'lv.json' },
+      { code: 'lt', file: 'lt.json' },
+      { code: 'de', file: 'de.json' },
+      { code: 'es', file: 'es.json' },
+      { code: 'ja', file: 'ja.json' },
+      { code: 'zh', file: 'zh.json' },
     ],
-    lazy: true,
-    langDir: 'internationalization',
+    lazy: false,
+    langDir: 'internationalization/',
     defaultLocale: 'en',
   },
 })

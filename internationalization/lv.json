@@ -1,0 +1,64 @@
+{
+  "Popular Movies": "Populārākie filmas",
+  "Top Rated Movies": "Labākās novērtētās filmas",
+  "Upcoming Movies": "Gaidāmās filmas",
+  "Now Playing Movies": "Pašlaik spēlējamās filmas",
+  "Popular TV Shows": "Populārākās TV šovi",
+  "Top Rated TV Shows": "Labākās novērtētās TV šovi",
+  "TV Shows Airing Today": "Šodien pārraidāmie TV šovi",
+
+  "Watch Trailer": "Skatīties treileri",
+  "Explore more": "Izpētīt vairāk",
+
+  "Overview": "Pārskats",
+  "Videos": "Video",
+  "Media Photos": "Fotogrāfijas",
+
+  "Cast": "Aktieri",
+  "More like this": "Vairāk tāpat kā šis",
+
+  "Storyline": "Sižets",
+  "Release Date": "Izlaišanas datums",
+  "Runtime": "Ilgums",
+  "Director": "Režisors",
+  "Budget": "Budžets",
+  "Revenue": "Ieņēmumi",
+  "Genre": "Žanrs",
+  "Status": "Statuss",
+  "Language": "Valoda",
+  "Production": "Ražošana",
+
+  "Backdrops": "Aizkadri",
+  "Posters": "Plakāti",
+
+  "Known For": "Zināms ar",
+  "Credits": "Kredīti",
+  "Person Photos": "Fotogrāfijas",
+  "(no biography)": "(nav biogrāfijas)",
+  "Known for": "Zināms ar",
+  "Place of birth": "Dzimšanas vieta",
+  "Birthday": "Dzimšanas diena",
+
+  "Acting Credits": "Aktēšanas kredīti",
+  "Production Credits": "Ražošanas kredīti",
+
+  "Type to search...": "Ierakstiet, lai meklētu...",
+  "Type something to search...": "Ierakstiet, lai meklētu...",
+
+  "{numberOfReviews} Reviews": "{numberOfReviews} Atsauksmes",
+
+  "{numberOfImages} Images": "{numberOfImages} Attēli",
+  "{numberOfVideos} Videos": "{numberOfVideos} Video",
+
+  "as {character}": "kā {character}",
+
+  "{count} items": "{count} vienības",
+  "Search result for: {currentSearch}": "Meklēšanas rezultāts: {currentSearch}",
+
+  "Error occurred on fetching": "Radās kļūda, ielādējot datus",
+  "Retry": "Mēģināt vēlreiz",
+  "Search":"Meklēt",
+  "Home":"Sākumlapa",
+  "Movies": "Filmas",
+  "TV Shows":"TV šovi"
+  }

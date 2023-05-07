@@ -4,21 +4,25 @@ import { getQuery } from 'ufo'
 const TMDB_API_URL = 'https://api.themoviedb.org/3'
 
 export default defineEventHandler(async (event) => {
-  const query = getQuery(event.req.url!)
+  const query = getQuery(event.node.req.url!)
   // eslint-disable-next-line no-console
   console.log(
     'Fetching TMDB API',
     {
-      url: event.req.url,
+      url: event.node.req.url,
       query,
-      params: event.context.params,
+      params: event.context.params ? event.context.params : {},
     },
   )
   const config = useRuntimeConfig()
+  const path = event.context?.params?.path
   if (!config.tmdb.apiKey)
     throw new Error('TMDB API key is not set')
+
+  if (!path)
+    throw new Error('Path not set')
   try {
-    return await $fetch(event.context.params.path, {
+    return await $fetch(path, {
       baseURL: TMDB_API_URL,
       params: {
         api_key: config.tmdb.apiKey,
@@ -29,7 +33,7 @@ export default defineEventHandler(async (event) => {
   }
   catch (e: any) {
     const status = e?.response?.status || 500
-    event.res.statusCode = status
+    event.node.res.statusCode = status
     return e.message?.replace(config.tmdb.apiKey, '***')
   }
 })

@@ -6,6 +6,7 @@
   "Popular TV Shows": "Popular TV Shows",
   "Top Rated TV Shows": "Top Rated TV Shows",
   "TV Shows Airing Today": "TV Shows Airing Today",
+  "On The Air TV Shows": "On The Air TV Shows",
 
   "Watch Trailer": "Watch Trailer",
   "Explore more": "Explore more",
@@ -56,5 +57,9 @@
   "Search result for: {currentSearch}": "Search result for: {currentSearch}",
 
   "Error occurred on fetching": "Error occurred on fetching",
-  "Retry": "Retry"
+  "Retry": "Retry",
+  "Search": "Search",
+  "Home": "Home",
+  "Movies": "Movies",
+  "TV Shows": "TV Shows"
 }

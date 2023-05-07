@@ -20,11 +20,11 @@ const queries = computed(() => QUERY_LIST[type.value as MediaType])
 
 const AsyncWrapper = defineComponent(async (_, ctx) => {
   if (!queries.value)
-    return throwError('404')
+    throw new Error('404');
 
   const list = await listMedia(type.value, queries.value?.[0].query, 1)
   if (!list)
-    return () => {}
+    return () => { }
   const item = await getMedia(type.value, list.results?.[0].id)
   return () => ctx.slots?.default?.({ item })
 })
@@ -39,11 +39,9 @@ const AsyncWrapper = defineComponent(async (_, ctx) => {
         </NuxtLink>
       </template>
     </AsyncWrapper>
-    <CarouselAutoQuery
-      v-for="query of queries"
-      :key="query.type + query.query"
-      :query="query"
-    />
+    <CarouselAutoQuery v-for="query of queries"
+                       :key="query.type + query.query"
+                       :query="query" />
     <TheFooter />
   </div>
 </template>

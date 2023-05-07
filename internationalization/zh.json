@@ -6,6 +6,7 @@
   "Popular TV Shows": "热门剧集",
   "Top Rated TV Shows": "高分剧集",
   "TV Shows Airing Today": "今日播出剧集",
+  "On The Air TV Shows": "正在播放的电视节目",
 
   "Watch Trailer": "观看预告",
   "Explore more": "查看更多",
@@ -53,5 +54,9 @@
   "as {character}": "饰 {character}",
 
   "{count} items": "{count}条结果",
-  "Search result for: {currentSearch}": "搜索 {currentSearch}"
+  "Search result for: {currentSearch}": "搜索 {currentSearch}",
+  "Search": "搜索",
+  "Home": "首页",
+  "Movies": "电影",
+  "TV Shows": "电视节目"
 }

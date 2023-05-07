@@ -1,15 +1,21 @@
-<script setup>
+<script  setup lang="ts">
 import '@unocss/reset/tailwind.css'
+import { AppSetup } from './utils/app'
+import { ITheme } from './utils/theme'
+
+AppSetup()
+const theme = useState<ITheme>('theme.current')
+const locale = useState<string>('locale.setting')
 
 useHead({
   htmlAttrs: {
     lang: 'en',
   },
-  charset: 'utf-8',
-  title: 'Nuxt Movies',
-  titleTemplate: title => title !== 'Nuxt Movies' ? `${title} · Nuxt Movies` : title,
+
+  title: 'Movie Up Next',
+  titleTemplate: title => title !== 'Movie Up Next' ? `${title} · Movie Up Next` : title,
   meta: [
-    { name: 'description', content: 'A TMDB client built with Nuxt Image to show the potential of it ✨' },
+    { name: 'description', content: "Discover the latest news, trailers, and reviews for upcoming movies on MovieUpNext.com. Your ultimate guide to the movies you're excited to see." },
     { property: 'og:image', content: 'https://movies.nuxt.space/social-card.png' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:site', content: '@nuxt_js' },
@@ -24,14 +30,21 @@ useHead({
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtLoadingIndicator />
-    <NuxtPage />
-  </NuxtLayout>
+        <!DOCTYPE html>
+        <Html :class="`${theme === 'dark' ? 'dark' : 'dark'}`"
+              :lang="locale">
+        <NuxtLayout>
+          <NuxtLoadingIndicator />
+          <NuxtPage />
+        </NuxtLayout>
+
+        </Html>
 </template>
 
 <style>
-html, body , #__nuxt{
+html,
+body,
+#__nuxt {
   height: 100vh;
   margin: 0;
   padding: 0;

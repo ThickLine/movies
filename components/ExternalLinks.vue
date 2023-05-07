@@ -1,46 +1,62 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { ExternalIds } from '~/types'
 
-defineProps<{
-  links: ExternalIds
+const props = defineProps<{
+  links: ExternalIds,
+  routeName: string
 }>()
+const imdbUrl = computed(() => {
+  if (!props.links.imdb_id) return ''
+
+  switch (props.routeName) {
+    case 'movie':
+      return `https://www.imdb.com/title/${props.links.imdb_id}`
+    case 'tv':
+      return `https://www.imdb.com/title/${props.links.imdb_id}`
+    case 'person':
+      return `https://www.imdb.com/name/${props.links.imdb_id}`
+    default:
+      return ''
+  }
+})
 </script>
 
 <template>
-  <div flex="~ row gap5" items-center text-lg mt-5>
-    <a
-      v-if="links.twitter_id"
-      :href="`https://twitter.com/${links.twitter_id}`"
-      target="_blank"
-      aria-label="Link to Twitter account"
-      rel="noopener"
-      n-link
-    >
-      <div i-simple-icons:twitter />
-    </a>
-    <a
-      v-if="links.facebook_id"
-      :href="`https://www.facebook.com/${links.facebook_id}`"
-      target="_blank"
-      aria-label="Link to Facebook account"
-      rel="noopener"
-      n-link
-    >
-      <div i-simple-icons:facebook />
-    </a>
-    <a
-      v-if="links.instagram_id"
-      :href="`https://instagram.com/${links.instagram_id}`"
-      target="_blank"
-      aria-label="Link to Instagram account"
-      rel="noopener"
-      n-link
-    >
-      <div i-simple-icons:instagram />
-    </a>
-    <a
-      v-if="links.imdb_id"
-      :href="`https://www.imdb.com/movie/${links.imdb_id}`"
+          <div flex="~ row gap5" items-center text-lg mt-5>
+            <a
+              v-if="links.twitter_id"
+              :href="`https://twitter.com/${links.twitter_id}`"
+              target="_blank"
+              aria-label="Link to Twitter account"
+              rel="noopener"
+              n-link
+            >
+              <div i-simple-icons:twitter />
+            </a>
+            <a
+              v-if="links.facebook_id"
+              :href="`https://www.facebook.com/${links.facebook_id}`"
+              target="_blank"
+              aria-label="Link to Facebook account"
+              rel="noopener"
+              n-link
+            >
+              <div i-simple-icons:facebook />
+            </a>
+            <a
+              v-if="links.instagram_id"
+              :href="`https://instagram.com/${links.instagram_id}`"
+              target="_blank"
+              aria-label="Link to Instagram account"
+              rel="noopener"
+              n-link
+            >
+              <div i-simple-icons:instagram />
+            </a>
+            <a
+                v-if="imdbUrl"
+                :href="imdbUrl"
       target="_blank"
       aria-label="Link to IMDb account"
       rel="noopener"

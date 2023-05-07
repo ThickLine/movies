@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const id = $(useRouteParam<string>('id'))
+
+const route = useRoute()
+const id = route.params.id as string
 const person = await getPerson(id)
 
 const $img = useImage()

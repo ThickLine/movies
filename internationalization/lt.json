@@ -1,0 +1,65 @@
+{
+  "Popular Movies": "Populiariausi filmai",
+  "Top Rated Movies": "Aukščiausiai vertinami filmai",
+  "Upcoming Movies": "Artėjantys filmai",
+  "Now Playing Movies": "Dabar rodomi filmai",
+  "Popular TV Shows": "Populiariausios TV laidos",
+  "Top Rated TV Shows": "Aukščiausiai vertinamos TV laidos",
+  "TV Shows Airing Today": "Šiandien rodomos TV laidos",
+  "On The Air TV Shows": "Dabar transliuojamos TV laidos",
+
+  "Watch Trailer": "Žiūrėti anonsą",
+  "Explore more": "Daugiau informacijos",
+
+  "Overview": "Apžvalga",
+  "Videos": "Vaizdo įrašai",
+  "Media Photos": "Nuotraukos",
+
+  "Cast": "Aktoriai",
+  "More like this": "Panašūs filmai/TV laidos",
+
+  "Storyline": "Sižetas",
+  "Release Date": "Išleidimo data",
+  "Runtime": "Trukmė",
+  "Director": "Režisierius",
+  "Budget": "Biudžetas",
+  "Revenue": "Pajamos",
+  "Genre": "Žanras",
+  "Status": "Būsena",
+  "Language": "Kalba",
+  "Production": "Gamyba",
+
+  "Backdrops": "Fonas",
+  "Posters": "Plakatai",
+
+  "Known For": "Garsėja dėl",
+  "Credits": "Kreditai",
+  "Person Photos": "Nuotraukos",
+  "(no biography)": "(nėra biografijos)",
+  "Known for": "Garsėja dėl",
+  "Place of birth": "Gimimo vieta",
+  "Birthday": "Gimimo data",
+
+  "Acting Credits": "Vaidybos kreditai",
+  "Production Credits": "Gamybos kreditai",
+
+  "Type to search...": "Ieškoti...",
+  "Type something to search...": "Įveskite ieškomo objekto pavadinimą...",
+
+  "{numberOfReviews} Reviews": "{numberOfReviews} atsiliepimai",
+
+  "{numberOfImages} Images": "{numberOfImages} nuotraukos",
+  "{numberOfVideos} Videos": "{numberOfVideos} vaizdo įrašai",
+
+  "as {character}": "kaip {character}",
+
+  "{count} items": "{count} elementai",
+  "Search result for: {currentSearch}": "Paieškos rezultatai: {currentSearch}",
+
+  "Error occurred on fetching": "Klaida kraunant duomenis",
+  "Retry": "Bandyti dar kartą",
+  "Search": "Ieškoti",
+  "Home": "Pagrindinis",
+  "Movies": "Filmai",
+  "TV Shows": "TV laidos"
+}

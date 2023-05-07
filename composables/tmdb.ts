@@ -3,8 +3,8 @@ import LRU from 'lru-cache'
 import { hash as ohash } from 'ohash'
 import type { Credits, Media, MediaType, PageResult, Person } from '../types'
 
-// const apiBaseUrl = 'http://localhost:3001'
-const apiBaseUrl = 'https://movies-proxy.vercel.app'
+const apiBaseUrl = 'http://localhost:3001'
+// const apiBaseUrl = 'https://movies-proxy.vercel.app'
 
 const cache = new LRU({
   max: 500,
@@ -34,11 +34,22 @@ export function fetchTMDB(url: string, params: Record<string, string | number | 
         }),
     )
   }
-  return cache.get(hash)!
+  return cache.get(hash)! as Promise<any>
 }
 
-export function listMedia(type: MediaType, query: string, page: number): Promise<PageResult<Media>> {
-  return fetchTMDB(`${type}/${query}`, { page })
+// export function listMedia(type: MediaType, query: string, page: number): Promise<PageResult<Media>> {
+//   return fetchTMDB(`${type}/${query}`, { page })
+// }
+export async function listMedia(
+  type: MediaType,
+  query: string,
+  page: number,
+  shouldFilter: boolean = false
+): Promise<PageResult<Media>> {
+  const data = await fetchTMDB(`${type}/${query}`, { page });
+  return shouldFilter ? filterUnreleasedMovies(data) : data
+
+
 }
 
 export function getMedia(type: MediaType, id: string): Promise<Media> {
@@ -47,6 +58,8 @@ export function getMedia(type: MediaType, id: string): Promise<Media> {
     include_image_language: 'en',
   })
 }
+
+
 
 /**
  * Get recommended
