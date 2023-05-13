@@ -9,16 +9,11 @@ const queries = computed(() => [
   QUERY_LIST.movie[0],
   QUERY_LIST.tv[0],
 ])
-console.log(queries)
+
 const AsyncWrapper = defineComponent(async (_, ctx) => {
-  try {
-    const list = await listMedia(type.value, queries.value[0].query, 1, QUERY_LIST.movie[0].query == NEEDS_FILTER)
-    console.log(`list $list`)
-    const item = await getMedia(type.value, list.results[0].id)
-    return () => ctx.slots?.default?.({ item })
-  } catch (error) {
-    console.error('Error:', error)
-  }
+  const list = await listMedia(type.value, queries.value[0].query, 1)
+  const item = await getMedia(type.value, list.results[0].id)
+  return () => ctx.slots?.default?.({ item })
 })
 </script>
 

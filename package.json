@@ -6,7 +6,7 @@
     "dev": "concurrently \"pnpm dev:app\" \"pnpm dev:proxy\"",
     "dev:app": "nuxi dev",
     "dev:proxy": "cd proxy && pnpm dev",
-    "start": ".output/server/index.mjs",
+    "start": "nuxi start",
     "postinstall": "nuxi prepare",
     "lint": "eslint ."
   },
@@ -17,7 +17,7 @@
     "@iconify-json/ph": "^1.1.5",
     "@iconify-json/simple-icons": "^1.1.51",
     "@iconify-json/twemoji": "^1.1.11",
-    "@nuxt/image-edge": "1.0.0-27954023.4cee565",
+    "@nuxt/image-edge": "1.0.0-28020728.5df24eb",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/i18n": "8.0.0-beta.10",
     "@pinia/nuxt": "^0.4.9",

@@ -9,7 +9,6 @@ const type = computed(() => route.params.type as MediaType || 'movie')
 const items: Media[] = reactive([])
 
 async function fetch(page: number) {
-  console.log(query)
   items.push(...(await listMedia(type.value, query.value, page, query.value === NEEDS_FILTER)).results)
 }
 </script>

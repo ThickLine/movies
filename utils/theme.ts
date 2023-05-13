@@ -28,7 +28,7 @@ export function ThemeManager() {
   const onThemeSettingChange = (themeSetting: IThemeSettingOptions) => {
     themeUserSetting.value = themeSetting;
     themeCurrent.value = themeSetting;
-    console.log(themeSetting)
+
   };
   watch(themeSetting, (val) => onThemeSettingChange(val));
 
