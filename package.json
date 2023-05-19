@@ -2,7 +2,7 @@
   "private": true,
   "packageManager": "pnpm@8.3.1",
   "scripts": {
-    "build": "nuxi build",
+    "build": "NITRO_PRESET=vercel-edge nuxt build",
     "dev": "concurrently \"pnpm dev:app\" \"pnpm dev:proxy\"",
     "dev:app": "nuxi dev",
     "dev:proxy": "cd proxy && pnpm dev",

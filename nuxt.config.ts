@@ -1,7 +1,7 @@
 const isDev = process.env.NODE_ENV === 'development'
 
 // const apiBaseUrl = 'http://localhost:3001'
-const apiBaseUrl = "https://next-movie-proxy.vercel.app";
+const apiBaseUrl = "https://movies-proxy.vercel.app";
 
 export default defineNuxtConfig({
   modules: [
