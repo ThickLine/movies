@@ -1,0 +1,11 @@
+# flyctl launch added from .gitignore
+**/node_modules
+**/*.log
+**/dist
+**/.output
+**/.nuxt
+**/.env
+**/.nitro
+**/.DS_Store
+**/.idea
+fly.toml
