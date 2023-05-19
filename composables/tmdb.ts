@@ -1,10 +1,10 @@
 import { $fetch } from 'ofetch'
-import LRU from 'lru-cache'
-import { hash as ohash } from 'ohash'
-import type { Credits, Media, MediaType, PageResult, Person } from '../types'
+import * as LRU from "lru-cache";
+import { hash as ohash } from "ohash";
+import type { Credits, Media, MediaType, PageResult, Person } from "../types";
 
 // const apiBaseUrl = 'http://localhost:3001'
-const apiBaseUrl = "https://next-movie-proxy.vercel.app/";
+const apiBaseUrl = "https://next-movie-proxy.vercel.app";
 
 const cache = new LRU({
   max: 500,
