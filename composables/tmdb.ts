@@ -1,12 +1,13 @@
 import { $fetch } from 'ofetch'
-import LRU from 'lru-cache'
+import { LRUCache } from 'lru-cache'
 import { hash as ohash } from 'ohash'
 import type { Credits, Media, MediaType, PageResult, Person } from '../types'
 
-const apiBaseUrl = 'http://localhost:3001'
+// const apiBaseUrl = 'http://localhost:3001'
+const apiBaseUrl = '/api';
 // const apiBaseUrl = 'https://movies-proxy.vercel.app'
 
-const cache = new LRU({
+const cache = new LRUCache<string, any>({
   max: 500,
   ttl: 2000 * 60 * 60, // 2 hour
 })
@@ -54,7 +55,7 @@ export async function listMedia(
 
 export function getMedia(type: MediaType, id: string): Promise<Media> {
   return fetchTMDB(`${type}/${id}`, {
-    append_to_response: 'videos,credits,images,external_ids,release_dates',
+    append_to_response: 'videos,credits,images,external_ids,release_dates,combined_credits',
     include_image_language: 'en',
   })
 }

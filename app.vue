@@ -3,7 +3,7 @@ import '@unocss/reset/tailwind.css'
 import { AppSetup } from './utils/app'
 import { ITheme } from './utils/theme'
 
-AppSetup()
+// AppSetup()
 const theme = useState<ITheme>('theme.current')
 const locale = useState<string>('locale.setting')
 

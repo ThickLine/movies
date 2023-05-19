@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
   if (!path)
     throw new Error('Path not set')
   try {
-    return await $fetch(path, {
+    return await $fetch(event.context.params!.path, {
       baseURL: TMDB_API_URL,
       params: {
         api_key: config.tmdb.apiKey,

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { MediaType } from '~/types'
-import { NEEDS_FILTER, QUERY_LIST } from '~/constants/lists'
+import { QUERY_LIST } from '~/constants/lists'
 
 const route = useRoute()
 const type = computed(() => route.params.type as MediaType || 'movie')
@@ -26,9 +26,11 @@ const AsyncWrapper = defineComponent(async (_, ctx) => {
         </NuxtLink>
       </template>
     </AsyncWrapper>
-    <CarouselAutoQuery v-for="query of queries"
-                       :key="query.type + query.query"
-                       :query="query" />
+      <CarouselAutoQuery
+        v-for="query of queries"
+        :key="query.type + query.query"
+        :query="query"
+      />
     <TheFooter />
   </div>
 </template>

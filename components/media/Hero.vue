@@ -3,14 +3,11 @@ import type { Media } from "~/types";
 import { formatTime } from "~/composables/utils";
 import { TMDB_IMAGE_BASE_THUMBNAIL } from "../../constants/images"
 
-const props = withDefaults(
-  defineProps<{
-    item: Media;
-  }>(),
-  {
-    item: () => ({}) as never,
-  }
-);
+const props = withDefaults(defineProps<{
+  item: Media
+}>(), {
+  item: () => ({} as Media),
+})
 
 const trailer = computed(() => getTrailer(props.item));
 
