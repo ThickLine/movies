@@ -5,13 +5,7 @@ const apiBaseUrl = 'http://localhost:3001'
 
 export default defineNuxtConfig({
   nitro: {
-    devProxy: {
-      "/proxy/rust": {
-        target: "http://127.0.0.1:3001",
-        prependPath: true,
-        changeOrigin: true,
-      },
-    },
+    preset: "node-server",
   },
   modules: [
     "@vueuse/nuxt",
