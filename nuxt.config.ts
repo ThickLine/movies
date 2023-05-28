@@ -4,18 +4,31 @@ const apiBaseUrl = 'http://localhost:3001'
 // const apiBaseUrl = 'https://next-movie-proxy.vercel.app'
 
 export default defineNuxtConfig({
+  nitro: {
+    devProxy: {
+      "/proxy/rust": {
+        target: "http://127.0.0.1:3001",
+        prependPath: true,
+        changeOrigin: true,
+      },
+    },
+  },
   modules: [
-    '@vueuse/nuxt',
-    '@unocss/nuxt',
-    '@pinia/nuxt',
-    '@nuxt/image-edge',
-    '@nuxtjs/i18n',
+    "@vueuse/nuxt",
+    "@unocss/nuxt",
+    "@pinia/nuxt",
+    "@nuxt/image-edge",
+    "@nuxtjs/i18n",
   ],
   experimental: {
     inlineSSRStyles: false,
   },
   routeRules: {
-    '/**': isDev ? {} : { cache: { swr: true, maxAge: 120, staleMaxAge: 60, headersOnly: true } },
+    "/**": isDev
+      ? {}
+      : {
+          cache: { swr: true, maxAge: 120, staleMaxAge: 60, headersOnly: true },
+        },
   },
   runtimeConfig: {
     public: {
@@ -23,10 +36,10 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    provider: 'proxy',
+    provider: "proxy",
     providers: {
       proxy: {
-        provider: 'ipx',
+        provider: "ipx",
         options: {
           baseURL: `${apiBaseUrl}/ipx`,
         },
@@ -36,23 +49,23 @@ export default defineNuxtConfig({
   i18n: {
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-      fallbackLocale: 'en',
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+      fallbackLocale: "en",
     },
-    strategy: 'no_prefix',
+    strategy: "no_prefix",
     locales: [
-      { code: 'en', file: 'en.json' },
-      { code: 'ee', file: 'ee.json' },
-      { code: 'lv', file: 'lv.json' },
-      { code: 'lt', file: 'lt.json' },
-      { code: 'de', file: 'de.json' },
-      { code: 'es', file: 'es.json' },
-      { code: 'ja', file: 'ja.json' },
-      { code: 'zh', file: 'zh.json' },
+      { code: "en", file: "en.json" },
+      { code: "ee", file: "ee.json" },
+      { code: "lv", file: "lv.json" },
+      { code: "lt", file: "lt.json" },
+      { code: "de", file: "de.json" },
+      { code: "es", file: "es.json" },
+      { code: "ja", file: "ja.json" },
+      { code: "zh", file: "zh.json" },
     ],
     lazy: false,
-    langDir: 'internationalization/',
-    defaultLocale: 'en',
+    langDir: "internationalization/",
+    defaultLocale: "en",
   },
-})
+});
