@@ -26,4 +26,4 @@ ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=3001
 
 # Start the dev server with hot reload at localhost:3001
-CMD [ "pnpm", "build" ]
+CMD [ "pnpm", "dev" ]
