@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import type { MediaType } from '~/types'
 import { NEEDS_FILTER, QUERY_LIST } from '~/constants/lists'
 
@@ -15,6 +16,12 @@ const AsyncWrapper = defineComponent(async (_, ctx) => {
   const item = await getMedia(type.value, list.results[0].id)
   return () => ctx.slots?.default?.({ item })
 })
+
+
+onMounted(() => {
+  console.log('Component has been mounted');
+  clearError({ redirect: '/' })
+});
 </script>
 
 <template>
