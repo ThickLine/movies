@@ -1,5 +1,16 @@
 version: '3'
 services:
+  proxy:
+    container_name: movie-proxy
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+    env_file: ./proxy/.env
+    volumes:
+      - ./proxy:/usr/src/app
+      - /usr/src/app/proxy/node_modules
+    ports:
+      - "3001:3001"
   nuxt:
     container_name: movie-nuxt
     build:
@@ -12,14 +23,3 @@ services:
     ports:
       - "3000:3000"
 
-  proxy:
-    container_name: movie-proxy
-    build:
-      context: ./proxy
-      dockerfile: Dockerfile
-    env_file: ./proxy/.env
-    volumes:
-      - ./proxy:/usr/src/app
-      - /usr/src/app/proxy/node_modules
-    ports:
-      - "3001:3001"
