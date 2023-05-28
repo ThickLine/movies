@@ -12,40 +12,37 @@
         Movies
       </div>
     </div>
-    <div flex="~ row gap2"
-         items-center>
-      <!--  <div op50 text-sm>
-        Made with
-      </div>
-      <a href="https://v3.nuxtjs.org/" target="_blank" title="Nuxt 3">
-        <IconNuxt3 h6 />
-      </a>
-    </div> -->
-      <!-- <div flex="~ row gap2" items-center>
-      <p text-true-gray:90 text-sm>
-        Data provided by&nbsp;
-        <a op100 target="_blank" href="https://www.themoviedb.org/" title="The Movie Database" rel="noopener" n-link-text>
-          <IconTMDB inline h4 />
-        </a>
-      </p>
-    </div> -->
-      <!-- <div flex="~ row gap2" items-center>
-      <p text-true-gray:90 text-sm>
-        This project uses the TMDB API but is not endorsed or certified by TMDB.
-      </p>
-    </div>
-    <div> -->
-      <!-- <ExternalLinks :links="{
-        twitter_id: 'nuxt_js',
-        github_id: 'nuxt/movies',
-      }">
-        <a href="https://vercel.com"
-           rel="noopener"
-           target="_blank"
-           aria-label="go to vercel">
-          <IconVercel alt="Vercel" />
-        </a>
-      </ExternalLinks> -->
-    </div>
+
+                <div class="flex flex-row gap-2 items-center">
+                <p class="text-true-gray-90 text-sm">
+                    Data provided by&nbsp;
+                    <a class="opacity-100" target="_blank" href="https://www.themoviedb.org/" title="The Movie Database" rel="noopener">
+                        <IconTMDB class="inline h-4" />
+                    </a>
+                </p>
+            </div>
+            <div class="flex flex-row gap-2 items-center">
+                <p class="text-true-gray-90 text-sm">
+                    This project uses the TMDB API but is not endorsed or certified by TMDB.
+                </p>
+            </div>
+            <div class="flex flex-row gap-2 items-center">
+                <p class="text-true-gray-90 text-sm">
+                    For more details, read our&nbsp;
+                    <a class="opacity-100" href="/privacy-policy" title="Privacy Policy" rel="noopener">Privacy Policy</a>&nbsp;and&nbsp;
+                    <a class="opacity-100" href="/terms-and-conditions" title="Terms and Conditions" rel="noopener">Terms and Conditions</a>.
+                </p>
+            </div>
+            <div class="flex flex-row gap-2 items-center">
+                <p class="text-true-gray-90 text-sm">
+                    &copy;{{ currentYear }} Movie Up Next. All rights reserved.
+                </p>
+            </div>
+
   </footer>
 </template>
+<script lang="ts" setup>
+import { computed, ComputedRef } from 'vue'
+
+const currentYear: ComputedRef<number> = computed(() => new Date().getFullYear())
+</script>

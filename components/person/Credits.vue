@@ -4,27 +4,7 @@ import type { Person } from '~/types'
 const props = withDefaults(defineProps<{
   item: Person
 }>(), {
-  item: () => ({
-    adult: false,
-    gender: 0,
-    id: 0,
-    known_for_department: '',
-    name: '',
-    original_name: '',
-    profile_path: '',
-    popularity: 0,
-    credit_id: '',
-    order: 0,
-    // Optional properties with default values
-    also_known_as: [],
-    birthday: undefined,
-    place_of_birth: undefined,
-    homepage: undefined,
-    biography: undefined,
-    external_ids: undefined,
-    combined_credits: undefined,
-    images: undefined,
-  }),
+  item: () => ({} as Person),
 })
 </script>
 
