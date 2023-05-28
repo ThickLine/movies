@@ -2,6 +2,7 @@
 import '@unocss/reset/tailwind.css'
 import { AppSetup } from './utils/app'
 import { ITheme } from './utils/theme'
+import { onMounted } from 'vue';
 
 AppSetup()
 const theme = useState<ITheme>('theme.current')
@@ -27,6 +28,11 @@ useHead({
     },
   ],
 })
+
+onMounted(() => {
+  console.log('Component has been mounted');
+  clearError({ redirect: '/' })
+});
 </script>
 
 <template>
