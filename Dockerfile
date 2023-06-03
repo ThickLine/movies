@@ -18,7 +18,7 @@ RUN npm install -g pnpm corepack \
     && pnpm install
 
 
-RUN pnpm build
+RUN yarn build
 
 
 EXPOSE 3000
@@ -26,4 +26,4 @@ EXPOSE 3000
 ENV NUXT_HOST=0.0.0.0
 ENV NUXT_PORT=3000
 
-CMD [ "pnpm", "start" ]
+CMD [ "yarn", "start" ]

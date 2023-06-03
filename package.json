@@ -2,11 +2,12 @@
   "private": true,
   "packageManager": "pnpm@7.29.0",
   "scripts": {
-    "build": "nuxi build",
+    "build": "nuxt build",
     "dev": "concurrently \"pnpm dev:app\" \"pnpm dev:proxy\"",
     "dev:app": "nuxi dev",
     "dev:proxy": "cd proxy && pnpm dev",
-    "start": "nuxi start",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "postinstall": "nuxi prepare",
     "lint": "eslint ."
   },
